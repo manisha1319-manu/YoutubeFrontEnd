@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .first_ul{
+        background-color: white;
+        width: 1260px;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+    .first_ul li{
+        list-style: none;
+    }
+    #ytlogo{
+        color: red;
+    }
+    .pfp{
+        margin-top: 10px;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+    }
+    .mic{
+    border: none;
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;    
+    }
+    .search{
+        border: 0.5px solid grey;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 40px;
+        width: 500px;
+    }
+    #searchicon{
+        font-size: medium;
+        width: 40px;
+        height: 30px;
+    }
+    #searchbutton{
+        border: 0.5px solid grey;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 50px;
+        height: 40px;
+    }
+    .create_button{
+        font-size: medium;
+        width: 80px;
+        height: 35px;
+        border: none;
+        border-radius: 20px;
+    }
+    .bell{
+        background-color: transparent;
+        border: none;
+    }
+    .bell i{
+        
+        font-size: x-large;
+    }
+    .second_ul{
+        background-color: white;
+        position: fixed;
+        width: 80px;
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .second_ul li{
+       text-align: center;
+        list-style: none;
+    }
+    .second_ul li i{
+        font-size: larger;
+    }
+    .second_ul p{
+        font-size: small;
+        text-align: center;
+    }
+    .below_nav{
+        display: flex;
+    }
+    .below_nav_list{
+        position: fixed;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        width: 1150px;
+        }
+    .below_nav_list button{
+        padding: 8px 13px;
+        border-radius: 8px;
+        border: none;
+        font-weight: bold;
+    }
+    .below_nav_list button:first-child{
+        background-color: black;
+        color: white;
+    }
+    .card-container{
+        width: 350px;
+      
+    }
+    .card-container img{
+        width: 350px;
+        border-radius: 10px;
+    }
+    .container-bottom{
+        display: flex;
+        width: 100%;
+    }
+    .container-bottom img{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    .videos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .content{
+        /* border: 1px solid; */
+        width: 1200px;
+    }
+    .content .videos{
+        margin-top: 20px;
+    }
+    nav{
+        position: fixed;
+    }
+    .fake-space{
+        width: 100px;
+        height: 55px;
+    }
+    .fake2{
+        width: 220px;
+    }
+    .fake3{
+        height: 70px;
+    }
+    .shorts-nav{
+        width: 1160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .shorts-nav h3 svg{
+        width: 40px;
+        height: 40px;
+    }
+    .short-videos{
+        /* border: 1px solid; */
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+    .vid{
+        width: 200px;
+        /* border: 1px solid; */
+    }
+    .vid img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    .short-vid-text{
+        display: flex;
+        margin: 10px 0px;
+    }
+</style>
+<body>
+    <nav>
+        <ul class="first_ul">
+            <li><i style="font-size: x-large;" class="bi bi-list"></i></li>
+            <li><i style="font-size: xx-large;" id="ytlogo" class="bi bi-youtube"></i><b style="font-size: x-large;">YouTube</b> <sup>IN</sup></li>
+            <li><input class="search" type="text" placeholder="     search"><button id="searchbutton"><i id="searchicon" class="bi bi-search"></i></button></li>
+            <li><button class="mic" style="font-size: x-large;"><i class="bi bi-mic"></i></button></li>
+            <li><button class="create_button">+Create</button></li>
+            <li><button class="bell"><i class="bi bi-bell"></i></button></i></li>
+            <li><img class="pfp" src="./cat.jpg" alt="pfp"></li>
+        </ul>
+    </nav>
+    <div class="fake-space">
+    </div>
+    <div class="below_nav">
+    <ul class="second_ul">
+        <div>
+         <li><i class="bi bi-house-door-fill"></i></li>
+         <p>Home</p>
+        </div>
+         <div><li><i class="bi bi-fast-forward"></i></li><p>Shorts</p></div>
+         <div><li><i class="bi bi-play-btn"></i></li><p>Subscriptions</p></div>
+         <div><li><i class="bi bi-person-circle"></i></li><p>You</p></div>
+         <div><li><i class="bi bi-download"></i></li><p>Downloads</p></div> 
+    </ul>
+    <div class="fake2">
+
+    </div>
+    <div class="content">
+        <div class="below_nav_list">
+            <button>All</button>
+            <button>Podcast</button>
+            <button>Songs</button>
+            <button>AI</button>
+            <button>GUI</button>
+            <button>Movies</button>
+            <button>Gaming</button>
+            <button>Software</button>
+            <button>photography</button>
+            <button>Academic Conference</button>
+            <button>Animated films</button>
+        </div>
+        <div class="fake3"></div>
+        <div class="videos">
+            
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/PLSDUsi4vY8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDFDQikoejMQDFUjmez5THrq4rShg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/VibgxTEOzb0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDN4NFBXjzJVxKPWb19vh9w0Hx5tg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/0dEJiQnotR8/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA-UbK_9hSiWxNt0Z9mms8wYHScAg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div>
+                <div class="shorts-nav">
+                    
+                    <h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"      focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;">
+                        <path d="m19.45,3.88c1.12,1.82.48,4.15-1.42,5.22l-1.32.74.94.41c1.36.58,2.27,1.85,2.35,3.27.08,1.43-.68,2.77-1.97,3.49l-8,4.47c-1.91,1.06-4.35.46-5.48-1.35-1.12-1.82-.48-4.15,1.42-5.22l1.33-.74-.94-.41c-1.36-.58-2.27-1.85-2.35-3.27-.08-1.43.68-2.77,1.97-3.49l8-4.47c1.91-1.06,4.35-.46,5.48,1.35Z" fill="#f03"></path>
+                        <path d="m10,15l5-3-5-3v6Z" fill="#fff"></path>
+                        </svg> 
+                        Shorts
+                    </h3>
+                    <i class="bi bi-three-dots-vertical"></i>
+                </div>
+                <div class="short-videos">
+                    
+                    <div class="vid">
+                        <img src="https://i.ytimg.com/vi/s1mn7rK0rXQ/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBDFMr83AnGTIskMn0WHxH3_X5u2Q" alt="">
+                        <div class="short-vid-text">
+                            <div>
+                                <h3>Why Airpods have no competition</h3>
+                                <p style="color: gray;">7M views</p>
+                            </div>
+                            <div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vid">
+                        <img src="https://i.ytimg.com/vi/axTfiU614sI/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBRhDvBSAw1EuOOMCByPrXpiYIvRg" alt="">
+                        <div class="short-vid-text">
+                            <div>
+                                <h3>Why Airpods have no competition</h3>
+                                <p style="color: gray;">7M views</p>
+                            </div>
+                            <div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vid">
+                        <img src="https://i.ytimg.com/vi/psBfknv29Zk/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLDNWCz3xuPCeGf3AJ5D7AYPVZr20w" alt="">
+                        <div class="short-vid-text">
+                            <div>
+                                <h3>Why Airpods have no competition</h3>
+                                <p style="color: gray;">7M views</p>
+                            </div>
+                            <div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vid">
+                        <img src="https://i.ytimg.com/vi/k7LSFYyBZUs/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCVmmVuzayE9qgZV2xlrSkc7o_XpQ" alt="">
+                        <div class="short-vid-text">
+                            <div>
+                                <h3>Why Airpods have no competition</h3>
+                                <p style="color: gray;">7M views</p>
+                            </div>
+                            <div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vid">
+                        <img src="https://i.ytimg.com/vi/SxV9nRg3Q0I/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCpyGtNVzccWi0W07iOEpp6Mh8mcQ" alt="">
+                        <div class="short-vid-text">
+                            <div>
+                                <h3>Why Airpods have no competition</h3>
+                                <p style="color: gray;">7M views</p>
+                            </div>
+                            <div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/KzC8zGX3Pyk/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD5_r4G02xUvLpehIX514DxlpFcVA" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/PZNg3TA6Osw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDBvIvoX9EClgHEKmNqQp8A_Lru7A" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/54fzspP3w0k/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqP2KJhs2a0DWOSCyIgh6Ah2Tiyg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+            
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/Q7XpbunqZT4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZmXWejI32DnMBNLZf0urRXuyzrg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/veadixp1t8Y/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOEkeMtedVwHnjyrdmhNhPUjAWjg" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <img src="https://i.ytimg.com/vi/i3nh2n-FRxw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDywmlFBkY7tRxmOw9cXxYFyKscZQ" alt="">
+                <div class="container-bottom">
+                <img src="./cat.jpg" alt="">
+                <div>
+                    <h4>Why Your 9-5 Job Won't Exist in 10 Years | The Future Of Work</h4>
+                    <p>Aevy TV <i class="bi bi-check-circle-fill"></i></p>
+                    <p>556K views <sup>.</sup> 2 Months Ago</p>
+                </div>
+                <i class="bi bi-three-dots-vertical"></i>
+            </div>
+            </div>
+        </div>
+    </div>
+  
+    </div>    
+
+</body>
+</html>
